@@ -28,13 +28,13 @@ class StudentController extends ChangeNotifier {
     _myResults = [
       GameResultModel(
         id: 'r1', studentId: 'me', studentName: 'Eu',
-        gameId: 'math_quiz', gameName: 'Quiz Matemático', subject: 'Matemática',
+        gameId: 'calculos', gameName: 'Cálculos Espaciais', subject: 'Matemática',
         score: 8, totalQuestions: 10, durationSeconds: 120,
         playedAt: DateTime.now().subtract(const Duration(hours: 2)),
       ),
       GameResultModel(
         id: 'r2', studentId: 'me', studentName: 'Eu',
-        gameId: 'word_hunt', gameName: 'Caça Palavras', subject: 'Português',
+        gameId: 'soletrar', gameName: 'Soletrar Espacial', subject: 'Português',
         score: 7, totalQuestions: 10, durationSeconds: 150,
         playedAt: DateTime.now().subtract(const Duration(hours: 5)),
       ),

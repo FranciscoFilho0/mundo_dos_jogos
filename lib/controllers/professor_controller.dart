@@ -36,31 +36,31 @@ class ProfessorController extends ChangeNotifier {
     _results = [
       GameResultModel(
         id: 'r1', studentId: 's1', studentName: 'Ana Silva',
-        gameId: 'math_quiz', gameName: 'Quiz Matemático', subject: 'Matemática',
+        gameId: 'calculos', gameName: 'Cálculos Espaciais', subject: 'Matemática',
         score: 8, totalQuestions: 10, durationSeconds: 120,
         playedAt: DateTime.now().subtract(const Duration(hours: 2)),
       ),
       GameResultModel(
         id: 'r2', studentId: 's2', studentName: 'Bruno Costa',
-        gameId: 'word_hunt', gameName: 'Caça Palavras', subject: 'Português',
+        gameId: 'soletrar', gameName: 'Soletrar Espacial', subject: 'Português',
         score: 6, totalQuestions: 10, durationSeconds: 180,
         playedAt: DateTime.now().subtract(const Duration(hours: 3)),
       ),
       GameResultModel(
         id: 'r3', studentId: 's3', studentName: 'Carla Mendes',
-        gameId: 'math_quiz', gameName: 'Quiz Matemático', subject: 'Matemática',
+        gameId: 'calculos', gameName: 'Cálculos Espaciais', subject: 'Matemática',
         score: 10, totalQuestions: 10, durationSeconds: 95,
         playedAt: DateTime.now().subtract(const Duration(hours: 1)),
       ),
       GameResultModel(
         id: 'r4', studentId: 's4', studentName: 'Diego Souza',
-        gameId: 'science_lab', gameName: 'Laboratório Espacial', subject: 'Ciências',
+        gameId: 'forca', gameName: 'Forca Galáctica', subject: 'Português',
         score: 5, totalQuestions: 10, durationSeconds: 210,
         playedAt: DateTime.now().subtract(const Duration(hours: 5)),
       ),
       GameResultModel(
         id: 'r5', studentId: 's1', studentName: 'Ana Silva',
-        gameId: 'geo_explorer', gameName: 'Explorador Galáctico', subject: 'Geografia',
+        gameId: 'perguntas', gameName: 'Perguntas Espaciais', subject: 'Geral',
         score: 9, totalQuestions: 10, durationSeconds: 110,
         playedAt: DateTime.now().subtract(const Duration(hours: 6)),
       ),

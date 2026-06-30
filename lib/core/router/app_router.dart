@@ -8,10 +8,18 @@ import '../../views/professor/professor_dashboard_view.dart';
 import '../../views/professor/professor_results_view.dart';
 import '../../views/professor/professor_students_view.dart';
 import '../../views/professor/professor_games_view.dart';
+import '../../views/professor/content_editors/quiz_editor_view.dart';
+import '../../views/professor/content_editors/word_list_editor_view.dart';
+import '../../views/professor/content_editors/math_config_editor_view.dart';
 import '../../views/student/student_home_view.dart';
 import '../../views/student/student_game_select_view.dart';
 import '../../views/student/student_ranking_view.dart';
 import '../../views/games/game_placeholder_view.dart';
+import '../../views/games/calculos/calculos_game_view.dart';
+import '../../views/games/soletrar/soletrar_game_view.dart';
+import '../../views/games/forca/forca_game_view.dart';
+import '../../views/games/silabas/silabas_game_view.dart';
+import '../../views/games/perguntas/perguntas_game_view.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -83,8 +91,39 @@ GoRouter createRouter() {
         path: AppRoutes.studentGamePlay,
         builder: (context, state) {
           final gameId = state.pathParameters['gameId'] ?? '';
-          return GamePlaceholderView(gameId: gameId);
+          switch (gameId) {
+            case 'calculos':
+              return const CalculosGameView();
+            case 'soletrar':
+              return const SoletrarGameView();
+            case 'forca':
+              return const ForcaGameView();
+            case 'silabas':
+              return const SilabasGameView();
+            case 'perguntas':
+              return const PerguntasGameView();
+            default:
+              return GamePlaceholderView(gameId: gameId);
+          }
         },
+      ),
+
+      // ── Professor content editors ────────────────────────────────────────
+      GoRoute(
+        path: AppRoutes.professorEditQuiz,
+        builder: (context, state) => const QuizEditorView(),
+      ),
+      GoRoute(
+        path: AppRoutes.professorEditSpelling,
+        builder: (context, state) => const WordListEditorView(type: WordListType.spelling),
+      ),
+      GoRoute(
+        path: AppRoutes.professorEditSyllables,
+        builder: (context, state) => const WordListEditorView(type: WordListType.syllables),
+      ),
+      GoRoute(
+        path: AppRoutes.professorEditMath,
+        builder: (context, state) => const MathConfigEditorView(),
       ),
     ],
   );

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'controllers/auth_controller.dart';
 import 'controllers/professor_controller.dart';
 import 'controllers/student_controller.dart';
+import 'controllers/game_content_controller.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 
@@ -13,14 +14,15 @@ void main() {
         ChangeNotifierProvider(create: (_) => AuthController()),
         ChangeNotifierProvider(create: (_) => ProfessorController()),
         ChangeNotifierProvider(create: (_) => StudentController()),
+        ChangeNotifierProvider(create: (_) => GameContentController()..loadContent()),
       ],
-      child: const MyApp(),
+      child: const EduGalaxyApp(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class EduGalaxyApp extends StatelessWidget {
+  const EduGalaxyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

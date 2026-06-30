@@ -180,7 +180,7 @@ class _StudentHomeViewState extends State<StudentHomeView> {
                             return Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
                               child: _MissionResultTile(
-                                emoji: r.gameId == 'math_quiz' ? '🔢' : r.gameId == 'word_hunt' ? '🔤' : '🔬',
+                                emoji: r.gameId == 'calculos' ? '🔢' : r.gameId == 'soletrar' ? '🔤' : r.gameId == 'forca' ? '🪐' : r.gameId == 'silabas' ? '🧩' : '❓',
                                 gameName: r.gameName,
                                 score: r.score,
                                 total: r.totalQuestions,
