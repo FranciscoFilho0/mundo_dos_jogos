@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "792990131550",
+    "project_id": "edugalaxy-app",
+    "storage_bucket": "edugalaxy-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792990131550:android:a1cb0201b8f27723769bcf",
+        "android_client_info": {
+          "package_name": "com.example.my_fist_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn6YfoLHJGrs380-yyNdIiG-dM1eyQDEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
